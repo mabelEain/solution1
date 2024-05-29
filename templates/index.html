@@ -21,9 +21,10 @@
                 <button class="btn btn-primary" type="submit">CHECK</button>
             </div>
         </form>
-
+        {% if error%}
+        <p><strong>{{error}}</strong></p>
+        {% endif %}
         {% if emails %}
-
         <ul class="list-group list-group-flush">
             {% for email in emails %}
                 <li class="list-group-item">{{ email }}</li>
